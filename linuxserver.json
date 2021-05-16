@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Weekly upgrades to new revisions of LinuxServer.io Docker images in <code>{{arg0}}</code>",
   "regexManagers": [
     {

@@ -1,0 +1,10 @@
+{
+  "description": "TODO",
+  "repository": "TODO",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "7.26.0",
+    "eslint-plugin-jsonc": "1.2.1",
+    "eslint-plugin-json-schema-validator": "1.0.26"
+  }
+}

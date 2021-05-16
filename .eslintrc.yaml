@@ -1,0 +1,33 @@
+---
+extends:
+  - plugin:jsonc/recommended-with-json
+  - plugin:json-schema-validator/recommended
+ignorePatterns: ['!.github']
+rules:
+  jsonc/array-bracket-newline: error
+  jsonc/array-bracket-spacing: error
+  jsonc/array-element-newline: [error, consistent]
+  jsonc/comma-style: error
+  jsonc/indent: [error, 2]
+  jsonc/key-spacing: error
+  jsonc/no-binary-numeric-literals: error
+  jsonc/no-comments: error
+  jsonc/no-escape-sequence-in-identifier: error
+  jsonc/no-hexadecimal-numeric-literals: error
+  jsonc/no-infinity: error
+  jsonc/no-nan: error
+  jsonc/no-octal: error
+  jsonc/no-octal-escape: error
+  jsonc/no-octal-numeric-literals: error
+  jsonc/no-plus-sign: error
+  jsonc/no-unicode-codepoint-escapes: error
+  jsonc/object-curly-newline: error
+  jsonc/object-curly-spacing: error
+  jsonc/object-property-newline: error
+  json-schema-validator/no-invalid:
+    - error
+    - schemas:
+        - fileMatch: [ci.yaml]
+          schema: https://json.schemastore.org/github-workflow.json
+        - fileMatch: [bitnami.json, comment.json, default.json, linuxserver.json]
+          schema: https://docs.renovatebot.com/renovate-schema.json

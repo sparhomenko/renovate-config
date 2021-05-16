@@ -1,0 +1,15 @@
+---
+name: CI
+on: [push] # yamllint disable-line rule:truthy
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Lint YAML
+        uses: ibiqlik/action-yamllint@v3.0.1
+        with:
+          strict: true
+      - name: Lint JSON and files with JSON schema
+        run: npm ci && npx eslint .

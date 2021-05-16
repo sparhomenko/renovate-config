@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Weekly upgrades to new revisions of Bitnami Docker images in <code>{{arg0}}</code>",
   "regexManagers": [
     {
@@ -15,11 +16,11 @@
       "versioning": "regex:^(?<compatibility>.*)-(?<major>\\d+)-r(?<patch>\\d+)$"
     },
     {
+      "extends": ["schedule:weekly"],
+      "matchDatasource": "docker",
       "matchManagers": ["regex"],
       "matchPackagePrefixes": ["bitnami/"],
-      "matchDatasource": "docker",
-      "matchUpdateTypes": ["patch"],
-      "extends": ["schedule:weekly"]
+      "matchUpdateTypes": ["patch"]
     }
   ]
 }
