@@ -3,7 +3,7 @@
   "regexManagers": [
     {
       "fileMatch": ["{{arg0}}"],
-      "matchStrings": ["\\s*image:\\s*\n\\s*repository:\\s+bitnami/(?<depName>.+?)\\s*\n\\s*tag:\\s+(?<currentValue>.*?r\\d+)\\s*\n"],
+      "matchStrings": ["\\s*image:\\s*\n\\s*repository:\\s+(?<depName>bitnami/.+?)\\s*\n\\s*tag:\\s+(?<currentValue>.*?r\\d+)\\s*\n"],
       "datasourceTemplate": "docker"
     }
   ],
@@ -11,11 +11,13 @@
     {
       "matchManagers": ["regex"],
       "matchPackagePrefixes": ["bitnami/"],
+      "matchDatasource": "docker",
       "versioning": "regex:^(?<compatibility>.*)-(?<major>\\d+)-r(?<patch>\\d+)$"
     },
     {
       "matchManagers": ["regex"],
       "matchPackagePrefixes": ["bitnami/"],
+      "matchDatasource": "docker",
       "matchUpdateTypes": ["patch"],
       "extends": ["schedule:weekly"]
     }

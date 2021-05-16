@@ -3,7 +3,7 @@
   "regexManagers": [
     {
       "fileMatch": ["{{arg0}}"],
-      "matchStrings": ["\\s*image:\\s*\n\\s*repository:\\s+linuxserver/(?<depName>.+?)\\s*\n\\s*tag:\\s+(?<currentValue>.*?ls\\d+)\\s*\n"],
+      "matchStrings": ["\\s*image:\\s*\n\\s*repository:\\s+(?<depName>linuxserver/.+?)\\s*\n\\s*tag:\\s+(?<currentValue>.*?ls\\d+)\\s*\n"],
       "datasourceTemplate": "docker"
     }
   ],
@@ -11,11 +11,13 @@
     {
       "matchManagers": ["regex"],
       "matchPackagePrefixes": ["linuxserver/"],
+      "matchDatasource": "docker",
       "versioning": "regex:^(?<compatibility>.*)-ls(?<patch>\\d+)$"
     },
     {
       "matchManagers": ["regex"],
       "matchPackagePrefixes": ["linuxserver/"],
+      "matchDatasource": "docker",
       "matchUpdateTypes": ["patch"],
       "extends": ["schedule:weekly"]
     }
