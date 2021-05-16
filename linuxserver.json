@@ -1,0 +1,23 @@
+{
+  "description": "Weekly upgrades to new revisions of LinuxServer.io Docker images in <code>{{arg0}}</code>",
+  "regexManagers": [
+    {
+      "fileMatch": ["{{arg0}}"],
+      "matchStrings": ["\\s*image:\\s*\n\\s*repository:\\s+linuxserver/(?<depName>.+?)\\s*\n\\s*tag:\\s+(?<currentValue>.*?ls\\d+)\\s*\n"],
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["regex"],
+      "matchPackagePrefixes": ["linuxserver/"],
+      "versioning": "regex:^(?<compatibility>.*)-ls(?<patch>\\d+)$"
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchPackagePrefixes": ["linuxserver/"],
+      "matchUpdateTypes": ["patch"],
+      "extends": ["schedule:weekly"]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "description": "Weekly upgrades to new revisions of Bitnami Docker images in <code>{{arg0}}</code>",
+  "regexManagers": [
+    {
+      "fileMatch": ["{{arg0}}"],
+      "matchStrings": ["\\s*image:\\s*\n\\s*repository:\\s+bitnami/(?<depName>.+?)\\s*\n\\s*tag:\\s+(?<currentValue>.*?r\\d+)\\s*\n"],
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["regex"],
+      "matchPackagePrefixes": ["bitnami/"],
+      "versioning": "regex:^(?<compatibility>.*)-(?<major>\\d+)-r(?<patch>\\d+)$"
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchPackagePrefixes": ["bitnami/"],
+      "matchUpdateTypes": ["patch"],
+      "extends": ["schedule:weekly"]
+    }
+  ]
+}
