@@ -1,0 +1,17 @@
+{
+  "description": "Update dependencies in lines ending with <code>renovate <datasource>:<depName></code> comment",
+  "regexManagers": [
+    {
+      "fileMatch": ["\\.yaml$"],
+      "matchStrings": ["\\s*:\\s+(?<currentValue>\\S*)\\s*#\\s*renovate (?<datasource>\\S*):(?<depName>\\S*)\\s*\n"]
+    },
+    {
+      "fileMatch": ["\\.tf$"],
+      "matchStrings": ["\\s*=\\s*\"(?<currentValue>\\S*)\"\\s*#\\s*renovate (?<datasource>\\S*):(?<depName>\\S*)\\s*\n"]
+    },
+    {
+      "fileMatch": ["pyproject\\.toml$"],
+      "matchStrings": ["\\s*=\\s*\"(?<currentValue>\\S*)\"\\s*#\\s*renovate (?<datasource>\\S*):(?<depName>\\S*)\\s*\n"]
+    }
+  ]
+}
