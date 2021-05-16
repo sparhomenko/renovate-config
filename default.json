@@ -1,6 +1,6 @@
 {
-  "description": "Automatically update dependencies as soon as possible",
   "extends": [":automergeAll", ":automergeBranch", ":dependencyDashboard"],
+  "description": "Always upgrade to the latest version (even if major) and bump version ranges",
   "separateMajorMinor": false,
   "rangeStrategy": "bump"
 }
