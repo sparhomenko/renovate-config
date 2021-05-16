@@ -1,0 +1,6 @@
+{
+  "description": "Automatically update dependencies as soon as possible",
+  "extends": [":automergeAll", ":automergeBranch", ":dependencyDashboard"],
+  "separateMajorMinor": false,
+  "rangeStrategy": "bump"
+}
