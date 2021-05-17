@@ -1,6 +1,6 @@
 {
-  "description": "TODO",
-  "repository": "TODO",
+  "description": "ESLint configuration",
+  "repository": "sparhomenko/renovate-config",
   "license": "MIT",
   "devDependencies": {
     "eslint": "7.26.0",
