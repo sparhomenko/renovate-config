@@ -1,4 +1,3 @@
 {
-  extends: ['sparhomenko/renovate-config'],
-  baseBranches: ['renovate/configure']
+  extends: ['sparhomenko/renovate-config']
 }
