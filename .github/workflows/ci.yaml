@@ -11,5 +11,5 @@ jobs:
         uses: ibiqlik/action-yamllint@v3.0.1
         with:
           strict: true
-      - name: Lint JSON and files with JSON schema
+      - name: Lint JSON and JSON schema
         run: npm ci && npx eslint .
