@@ -16,11 +16,12 @@
       "versioning": "regex:^(?<compatibility>.*)-(?<major>\\d+)-r(?<patch>\\d+)$"
     },
     {
-      "extends": ["schedule:weekly"],
       "matchDatasource": "docker",
       "matchManagers": ["regex"],
       "matchPackagePrefixes": ["bitnami/"],
-      "matchUpdateTypes": ["patch"]
+      "matchUpdateTypes": ["patch"],
+      "groupName": "Bitnami OS patches",
+      "extends": ["schedule:weekly"]
     }
   ]
 }
