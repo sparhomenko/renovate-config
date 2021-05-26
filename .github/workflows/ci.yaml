@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
       - name: Lint YAML
-        uses: ibiqlik/action-yamllint@v3.0.1
+        uses: ibiqlik/action-yamllint@v3.0.2
         with:
           strict: true
       - name: Lint JSON and JSON schema
