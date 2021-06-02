@@ -7,9 +7,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
+      - name: Checkout lint config
+        uses: actions/checkout@v2.3.4
+        with:
+          repository: sparhomenko/lint-config
+          ssh-key: ${{ secrets.LINT_CONFIG_KEY }}
+          path: lint-config
       - name: YAML Lint
         uses: ibiqlik/action-yamllint@v3.0.2
         with:
           strict: true
+          config_file: lint-config/.yamllint.yaml
       - name: JSON and JSON schema Lint
         run: npm ci && npx eslint .
