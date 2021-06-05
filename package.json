@@ -5,6 +5,6 @@
   "devDependencies": {
     "eslint": "7.28.0",
     "eslint-plugin-jsonc": "1.2.1",
-    "eslint-plugin-json-schema-validator": "1.0.33"
+    "eslint-plugin-json-schema-validator": "1.0.34"
   }
 }
