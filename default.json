@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Always upgrade to the latest version (even if major) and bump version ranges",
-  "extends": [":automergeAll", ":dependencyDashboard"],
+  "extends": [":automergeAll", ":automergeBranch", ":dependencyDashboard"],
   "rangeStrategy": "bump",
   "separateMajorMinor": false
 }
