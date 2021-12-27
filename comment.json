@@ -10,5 +10,11 @@
       "fileMatch": ["\\.tf$", "pyproject\\.toml$"],
       "matchStrings": ["\\s*=\\s*\"(?<currentValue>\\S*)\"\\s*#\\s*renovate (?<datasource>\\S*?):(?<depName>\\S*?)(?::(?<extractVersion>\\S*))?\\s*\n"]
     }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["python/cpython"],
+      "versioning": "pep440"
+    }
   ]
 }
