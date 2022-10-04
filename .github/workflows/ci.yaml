@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3.1.0
       - name: Checkout lint config
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3.1.0
         with:
           repository: sparhomenko/lint-config
           ssh-key: ${{ secrets.LINT_CONFIG_KEY }}
