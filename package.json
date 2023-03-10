@@ -3,7 +3,7 @@
   "repository": "sparhomenko/renovate-config",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "8.35.0",
+    "eslint": "8.36.0",
     "eslint-plugin-jsonc": "2.6.0",
     "eslint-plugin-json-schema-validator": "4.1.0"
   }
